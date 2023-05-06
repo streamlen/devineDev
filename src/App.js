@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router,Routes, Route, useParams} from 'react-router-dom';
+
+import LandingPage from './pages/LandingPage';
+import ProjectPage from './pages/ProjectPage';
+import ProjectDetailPage from './pages/ProjectDetailPage.js';
+import TeamPage from './pages/TeamPage.js';
+import DiscussProjectPage from './pages/DiscussProjectPage.js';
+import NotFoundPage from './pages/NotFoundPage.js';
+
+import './assets/css/styles.css';
+import './App.css'
 
 function App() {
+   let { id } = useParams();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Router>
+    <Routes>
+      <Route exact path='/' element={<LandingPage location={'/'} />} />
+      <Route exact path="/project" element={<ProjectPage location={'/project'} />} />
+      <Route exact path="/project/:id" element={<ProjectDetailPage location={id} />} />
+      <Route exact path="/team" element={<TeamPage location={"/team"}/>} />
+      <Route exact path="/discuss-project" element={<DiscussProjectPage location={'/discuss-project'}/>} />
+      <Route path="" element={<NotFoundPage />} />
+    </Routes>
+    </Router>
   );
 }
 
