@@ -11,7 +11,7 @@ export default function BrandIcon() {
       href="/"
     >
       <p className="text-theme-blue text-4xl">
-        devine
+        divine
         <span className="text-theme-purple">Dev</span>
       </p>
     </Button>
