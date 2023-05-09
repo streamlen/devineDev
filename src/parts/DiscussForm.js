@@ -4,62 +4,65 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React from "react";
+// import nodemailer from 'nodemailer';
 
-import Fade from 'react-reveal/Fade';
-import * as emailjs from 'emailjs-com';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import * as emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import Form from '../elements/Form/index.js';
-import Button from '../elements/Button/index.js';
+import Form from "../elements/Form/index.js";
+import Button from "../elements/Button/index.js";
 
 export default function DiscussForm(props) {
   const { data, resetForm } = props;
 
-  const submitEmail = () => {
-    const {
-      name, company, email, phone, projectIdea,
-    } = data;
-
-    const templateParams = {
-      from_name: `${name} - ${company} ( ${phone} - ${email} )`,
-      to_name: 'devineDev',
-      message: projectIdea,
-    };
-
+  const submitEmail = async () => {
+   toast.info("Sending Email , Please Wait .....");
+    const { name, company, email, phone, projectIdea } = data;
     if (
-      name !== ''
-            && company !== ''
-            && email !== ''
-            && phone !== ''
-            && projectIdea !== ''
+      name !== "" &&
+      company !== "" &&
+      email !== "" &&
+      phone !== "" &&
+      projectIdea !== ""
     ) {
-      emailjs.send(
-        'service_h4gtndg',
-        'template_a9tvs7a',
-        templateParams,
-        'user_csqIxzN5mKsl1yw4ffJzV',
-      )
+      console.log(data);
+      fetch("http://127.0.0.1:3001/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then(async (res) => {
+          const resData = await res.json();
+          console.log(resData);
+          if (resData.status === "success") {
+            toast.success("Success! we'll get back to you soon. Thank you!");
+          } else if (resData.status === "fail") {
+            toast.error(resData);
+          }
+        })
         .then(() => {
-          toast.success('Success! we\'\ll get back to you soon. Thank you!');
           resetForm();
-        }, (error) => {
-          toast.error(error);
         });
     } else {
-      toast.error('Please fill out the blank form.');
+      toast.error("Please fill out the blank form.");
     }
   };
 
   return (
     <section className="flex flex-col container mx-auto mt-10 justify-center">
-      <Fade bottom>
-        <h1 className="text-5xl text-theme-blue text-center font-bold">Lets Discuss</h1>
+      {/* <Fade bottom> */}
+        <h1 className="text-5xl text-theme-blue text-center font-bold">
+          Lets Discuss
+        </h1>
 
         <p className="font-light text-lg text-gray-400 text-center mb-12">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
-          Please fill out the form below to discuss your project and we'll get back to you in less than 24 hours.
+          Please fill out the form below to discuss your project and we'll get
+          back to you in less than 24 hours.
         </p>
 
         <div className="flex flex-col">
@@ -125,10 +128,8 @@ export default function DiscussForm(props) {
             Submit
           </Button>
         </div>
-      </Fade>
 
       <ToastContainer />
-
     </section>
   );
 }

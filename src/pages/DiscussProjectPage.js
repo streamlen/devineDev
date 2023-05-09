@@ -2,9 +2,10 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { Component } from 'react';
 
-import Header from '../parts/Header.js';
-import DiscussForm from '../parts/DiscussForm.js';
+// import Header from '../parts/Header.js';
+// import DiscussForm from '../parts/DiscussForm.js';
 import Footer from '../parts/Footer.js';
+import DiscussSection from '../parts/DiscussSection.js';
 
 export default class DiscussProjectPage extends Component {
   constructor(props) {
@@ -52,8 +53,7 @@ export default class DiscussProjectPage extends Component {
       return (
         <>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Header {...this.props} />
-          <DiscussForm data={data} onChange={this.onChange} resetForm={this.resetForm} />
+          <DiscussSection data={data} onChange={this.onChange} resetForm={this.resetForm} {...this.props}/>
           <Footer />
         </>
       );

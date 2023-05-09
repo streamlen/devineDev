@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="bg-gray-50 border-t border-gray-200 pb-6">
       <div className="container flex-col mx-auto ">
         <div className="flex flex-col sm:flex-row mt-8 justify-center">
-          <div className="w-1/3 flex-col ml-16 mr-8">
+          <div className="w-2/3 flex-col ml-16 mr-0">
             <BrandIcon />
             <p className="w-full text-lg text-gray-400 font-light">
             Your online success
@@ -18,7 +18,7 @@ export default function Footer() {
               is our mission
             </p>
           </div>
-          <div className="w-1/3 mt-0 ml-16 mr-0 sm:ml-0 sm:mr-5">
+          <div className="w-2/3 mt-0 ml-16 mr-0 sm:ml-0 sm:mr-5">
             <h1 className="text-lg text-theme-blue pt-4 pb-2">
               Office
             </h1>
@@ -28,9 +28,18 @@ export default function Footer() {
             <p className="text-lg text-gray-400 font-light">
               Pimpri, Pune, Maharashtra, India.
             </p>
+            <p className="text-lg text-gray-400 font-light">
+              +91 9075840173
+            </p>
+            <p className="text-lg text-gray-400 font-light">
+              +91 8080855182
+            </p>
+            <p className="text-lg text-gray-400 font-light">
+              +91 8055415105
+            </p>
           </div>
-          <div className="w-1/3 ml-16 sm:ml-0 mt-0">
-            <h1 className="text-lg text-theme-blue pt-4 pb-2">
+          <div className="w-1/4 ml-16 sm:ml-0 mt-0 ">
+            <h1 className="text-lg text-theme-blue pt-4 pb-2 text-left">
               Social
             </h1>
             <Button href="https://www.instagram.com/racmathafidz/" type="link" target="_blank" className="flex text-lg text-gray-400 font-light hover:underline" isExternal>
