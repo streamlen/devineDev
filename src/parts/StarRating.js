@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import '../assets/css/rating.css';
 
 export default function StarRating(props){
-   const [rating, setRating] = useState(props.rating);
-   const [hover, setHover] = useState(0);
    return (
      <div className="star-rating">
        {[...Array(5)].map((star, index) => {
@@ -12,10 +10,7 @@ export default function StarRating(props){
            <button
              type="button"
              key={index}
-             className={index <= (hover || rating) ? "on" : "off"}
-             onClick={() => setRating(index)}
-             onMouseEnter={() => setHover(index)}
-             onMouseLeave={() => setHover(rating)}
+             className={index <= (props.rating) ? "on" : "off"}
            >
              <span className="star" style={{fontSize:'1.5rem'}}>&#9733;</span>
            </button>
