@@ -68,7 +68,7 @@ export class Dropdown extends React.Component {
               Dashbord
             </a>
             <a
-              href="#"
+              href="/v1/signup"
               className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
               onClick={() => {
                 this.props.setisLogin(false);

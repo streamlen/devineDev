@@ -7,6 +7,7 @@ import SignUp from "./Signup.js";
 
 export default function DiscussSection(props) {
    const {isLogin ,setisLogin ,isSignup , setisSignup} = props;
+   window.scroll(0, 0);
   return isLogin ? (
     <>
       <HeaderafterLogin {...props}  setisLogin={setisLogin}/>

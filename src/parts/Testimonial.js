@@ -8,7 +8,9 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
-export default function Testimonial({ data }) {
+export default function Testimonial(props) {
+   // props.onUpdate();
+   const data = props.data;
   return (
     <Fade bottom>
       <section className="container mx-auto">
@@ -25,19 +27,19 @@ export default function Testimonial({ data }) {
           }}
         >
           {
-                        data.map((item) => (
+                        data && data.map((item) => (
                           <SplideSlide>
                             <div className="flex-col xl:w-4/5 rounded-2xl shadow-xl sm:shadow-2xl border border-light-theme-purple px-8 py-6 mx-2 mb-6 mt-6 xl:mx-auto sm:mx-6 sm:mb-12">
                               <div className="flex items-center mb-5">
-                                <img src={item.imageUrl} alt="Testimoni" className="w-32 h-32 rounded-full" />
+                                <img src='../assets/images/Design.png' alt="Testimoni" className="w-32 h-32 rounded-full" />
                                 <div className="flex-col pl-5">
                                   <h2 className="text-theme-blue text-2xl">{item.name}</h2>
-                                  <p className="font-light text-gray-400">{item.company}</p>
+                                  <p className="font-light text-gray-400">{item.companyname}</p>
                                   <StarRating rating={item.rating}/>
                                 </div>
                               </div>
                               <p className="font-light text-2xl text-gray-400 pl-5 pt-3 pb-1">
-                                {item.testimoni}
+                                {item.content}
                               </p>
                             </div>
                           </SplideSlide>

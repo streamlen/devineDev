@@ -203,12 +203,16 @@ const SignUp = (props) => {
                             We are more than just a company
                           </h4>
                           <p className="text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat.
+                            We are a brand which helps you to go online and make
+                            your company grow to an ultimate level. We also
+                            embrace our responsibility to act as a force for
+                            positive change. We believe that collective efforts
+                            yield greater results so we actively seek for
+                            partnerships and collaborations with like-minded
+                            organizations, sharing knowledge, resources, and
+                            expertise to amplify our impact.
                           </p>
+                          <p> <strong>"We are more than just a company"</strong> embodies our commitment to our purpose, people, innovation, sustainability, collaboration, ethics, and empowering future generations. It signifies our determination to create a lasting positive impact on society while achieving sustainable growth and success.</p>
                         </div>
                       </div>
                     </div>

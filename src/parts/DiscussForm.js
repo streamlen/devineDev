@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Form from "../elements/Form/index.js";
 import Button from "../elements/Button/index.js";
+import Review from "./review.js";
 
 export default function DiscussForm(props) {
   const { data, resetForm } = props;
@@ -53,7 +54,7 @@ export default function DiscussForm(props) {
   };
 
   return (
-    <section className="flex flex-col container mx-auto mt-10 justify-center">
+    <section className="flex flex-col mx-auto mt-10 justify-center">
       {/* <Fade bottom> */}
         <h1 className="text-5xl text-theme-blue text-center font-bold">
           Lets Discuss
@@ -128,7 +129,7 @@ export default function DiscussForm(props) {
             Submit
           </Button>
         </div>
-
+        <Review/>
       <ToastContainer />
     </section>
   );
