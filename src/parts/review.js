@@ -19,7 +19,7 @@ export default function Review() {
   };
 
   const submitPost = async()=>{
-      await fetch('http://127.0.0.1:3001/v1/postreview',{
+      await fetch('https://divinedev-api.onrender.com/v1/postreview',{
          method:"POST",
          headers: {
             "Content-Type": "application/json",

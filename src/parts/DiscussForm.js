@@ -29,7 +29,7 @@ export default function DiscussForm(props) {
       projectIdea !== ""
     ) {
       console.log(data);
-      fetch("http://127.0.0.1:3001/send", {
+      fetch("https://divinedev-api.onrender.com/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

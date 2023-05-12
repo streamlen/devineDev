@@ -9,7 +9,7 @@ const Login = (props) => {
   };
   const handleclick = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://127.0.0.1:3001/v1/login", {
+    const response = await fetch("https://divinedev-api.onrender.com/v1/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
