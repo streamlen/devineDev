@@ -18,7 +18,7 @@ export default function LandingPage(props) {
   const [data, setData] = useState([]);
   const [dataloaded, setDataloaded] = useState(false)
 
-  !dataloaded && (async()=>await fetch("http://127.0.0.1:3001/v1/getreview").then(async (res) => {
+  !dataloaded && (async()=>await fetch(" https://divinedev-api.onrender.com/v1/getreview").then(async (res) => {
     const bro = await res.json();
     if (bro.success) {
       console.log(bro.post);

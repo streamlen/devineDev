@@ -15,7 +15,8 @@ const SignUp = (props) => {
   };
   const onclicks = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://127.0.0.1:3001/v1/createuser", {
+    console.log(createcred.email);
+    const response = await fetch("https://divinedev-api.onrender.com/v1/createuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
