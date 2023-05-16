@@ -37,7 +37,7 @@ export class Dropdown extends React.Component {
               />
             </button>
             <button className="ml-4 text-xl" onClick={this.toggleDropdown}>
-              Harsh Jha
+              {this.props.user.name}
             </button>
           </div>
           <button
@@ -57,8 +57,8 @@ export class Dropdown extends React.Component {
             }
           >
             <div class="px-4 py-3 text-lg text-gray-600 dark:text-gray">
-              <div>Harsh Jha</div>
-              <div class="font-medium truncate">jhaharsh878@gmail.com</div>
+              <div>{this.props.user.name}</div>
+              <div class="font-medium truncate">{this.props.user.email}</div>
             </div>
          <div>
             <a
@@ -68,7 +68,7 @@ export class Dropdown extends React.Component {
               Dashbord
             </a>
             <a
-              href="/v1/signup"
+              href="/discuss-project"
               className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
               onClick={() => {
                 this.props.setisLogin(false);

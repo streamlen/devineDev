@@ -18,6 +18,7 @@ function Topic() {
 function App() {
    const [isLogin, setisLogin] = useState(false);
   const [isSignup, setisSignup] = useState(true);
+  const [user,setUser] = useState({});
   return (
    <Router>
     <Routes>
@@ -25,7 +26,7 @@ function App() {
       <Route exact path="/project" element={<ProjectPage location={'/project'}/>} />
       <Route exact path="/project/:id" element={<Topic/>} />
       <Route exact path="/team" element={<TeamPage location={"/team"}/>} />
-      <Route exact path="/discuss-project" element={<DiscussProjectPage location={'/discuss-project'} isLogin={isLogin} isSignup={isSignup} setisLogin={setisLogin} setisSignup={setisSignup} />} />
+      <Route exact path="/discuss-project" element={<DiscussProjectPage location={'/discuss-project'} isLogin={isLogin} isSignup={isSignup} setisLogin={setisLogin} setisSignup={setisSignup} user={user} setUser={setUser}/>} />
       <Route path="" element={<NotFoundPage />} />
     </Routes>
     </Router>

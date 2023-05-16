@@ -34,6 +34,7 @@ const SignUp = (props) => {
       console.log("success full", json);
       props.setisSignup(true);
       props.setisLogin(true);
+      props.setUser(json.user);
       localStorage.setItem("token", json.authtoken); // saving token in cache memory .
     } else {
       console.log(json);

@@ -25,6 +25,7 @@ const Login = (props) => {
       console.log(json.authtoken);
       localStorage.setItem("token", json.authtoken);
       props.setisLogin(true);
+      props.setUser(json.user);
     } else {
       alert("please login with correct credentials");
     }
