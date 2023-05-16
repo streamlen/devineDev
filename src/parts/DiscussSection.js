@@ -6,11 +6,11 @@ import Login from "./login.js";
 import SignUp from "./Signup.js";
 
 export default function DiscussSection(props) {
-   const {isLogin ,setisLogin ,isSignup , setisSignup} = props;
+   const {isLogin ,setisLogin ,isSignup , setisSignup, user, setUser} = props;
    window.scroll(0, 0);
   return isLogin ? (
     <>
-      <HeaderafterLogin {...props}  setisLogin={setisLogin}/>
+      <HeaderafterLogin {...props}  user={user} setisLogin={setisLogin}/>
       <DiscussForm
         data={props.data}
         onChange={props.onChange}
@@ -20,12 +20,12 @@ export default function DiscussSection(props) {
   ) : isSignup ? (
     <>
       <Header {...props} />
-      <Login setisLogin={setisLogin} setisSignup={setisSignup} />
+      <Login setisLogin={setisLogin} setUser={setUser} setisSignup={setisSignup} />
     </>
   ) : (
     <>
       <Header {...props} />
-      <SignUp setisLogin={setisLogin} setisSignup={setisSignup} />
+      <SignUp setisLogin={setisLogin} setUser={setUser} setisSignup={setisSignup} />
     </>
   );
 }
