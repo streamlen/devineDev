@@ -67,7 +67,7 @@ export default function PortfolioDetail({ data }) {
                         </h1>
 
                         <p className="font-light text-lg text-gray-400 text-justify">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          {item.description}
                         </p>
                       </div>
 
@@ -88,7 +88,7 @@ export default function PortfolioDetail({ data }) {
                       </div>
 
                       <p className="font-light italic text-gray-400 mt-16 mx-8 sm:mx-16 xl:mx-28">
-                        * This project is just example.
+                        * This is the link to the
                         {' '}
                         <br />
                         Original project :
