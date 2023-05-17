@@ -18,70 +18,52 @@
     ],
     "portfolio" : [
         {
-            "id": "asd1293uasdads1",
-            "title": "Recruiting App",
-            "imageUrl": "assets/images/Recruiting.png",
-            "type": "Mobile Apps",
-            "responsibility": [
-                "Mobile Development",
-                "UI/UX Design"
-            ],
-            "credit": "https://dribbble.com/shots/15164950-Recruiting-app"
-        },
-        {
-            "id": "asd1293uhjkhkjh2",
-            "title": "Stream+",
-            "imageUrl": "assets/images/Stream.png",
-            "type": "Mobile Apps",
-            "responsibility": [
-                "Mobile Development",
-                "UI/UX Design"
-            ],
-            "credit": "https://dribbble.com/shots/15276430-Stream"
-        },
-        {
-            "id": "asd1293uvbvcbbd3",
-            "title": "Freelance",
-            "imageUrl": "assets/images/Freelance.png",
-            "type": "Mobile Apps",
-            "responsibility": [
-                "Mobile Development",
-                "UI/UX Design"
-            ],
-            "credit": "https://dribbble.com/shots/15223131-Freelance-Mobile-App-Concept"
-        },
-        {
             "id": "asd1293ufgdfgs4",
-            "title": "Aura",
-            "imageUrl": "assets/images/Aura.png",
+            "title": "DTORY",
+            "imageUrl": "assets/images/dtory.png",
             "type": "Website",
             "responsibility": [
                 "Web Development",
                 "UI/UX Design"
             ],
-            "credit": "https://dribbble.com/shots/15176338-Aura-Website-Main-Page"
+            "description":"We have Built this Websit using MERN STACK where I have also integrated mailing system using Nodemailer . From designing to the development every thing was done by us . This is fully functional website and responsive .",
+            "credit": "https://www.dtory.in"
         },
         {
             "id": "asd1293ulskmnb5",
-            "title": "Surtido Rico",
-            "imageUrl": "assets/images/Surtido.png",
+            "title": "OmniFood",
+            "imageUrl": "assets/images/omnifood.png",
             "type": "Website",
             "responsibility": [
                 "Web Development",
                 "UI/UX Design"
             ],
-            "credit": "https://dribbble.com/shots/15173118-Surtido-Rico"
+            "description":"We have Built this Websit using pure HTML, CSS and JavaScript where it is just a demo website , by the way it is responsive .",
+            "credit": "https://adarsh-omnifood.netlify.app/"
         },
         {
             "id": "asd1293ulkmnbj6",
-            "title": "Courses Management",
-            "imageUrl": "assets/images/ManagementApp.png",
+            "title": "PortFolio",
+            "imageUrl": "assets/images/portfolio.png",
             "type": "Website",
             "responsibility": [
                 "Web Development",
                 "UI/UX Design"
             ],
-            "credit": "https://dribbble.com/shots/15197890-Courses-Management-and-Promoting-Web-App"
+            "description":"We have Built this Websit using MERN STACK where it is just a portfolio website , which is responsive . Also mailing facility is given using Nodemailer no any third party libary .",
+            "credit": "https://harshjha.vercel.app"
+        },
+        {
+         "id": "asd1293ulkmnbj7",
+            "title": "PortFolio",
+            "imageUrl": "assets/images/adarsh.png",
+            "type": "Website",
+            "responsibility": [
+                "Web Development",
+                "UI/UX Design"
+            ],
+            "description":"We have Built this Websit using MERN STACK where it is just a portfolio website , which is responsive .",
+            "credit": "https://adarshshahi.vercel.app/"
         }
     ],
     "advantage": [

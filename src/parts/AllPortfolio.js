@@ -22,12 +22,14 @@ export default function AllPortfolio({ data }) {
         <Tabs className="flex flex-col px-4">
           <TabList>
             <div className="flex flex-row mb-5">
+            <Tab>
+                <button className="font-normal px-5 py-2 mr-3 text-theme-purple text-lg border border-theme-purple rounded-full transition duration-300 hover:bg-theme-purple hover:text-white focus:outline-none focus:bg-theme-purple focus:text-white">Website</button>
+              </Tab>
+
               <Tab>
                 <button className="font-normal px-5 py-2 mr-3 text-theme-purple text-lg border border-theme-purple rounded-full transition duration-300 hover:bg-theme-purple hover:text-white focus:outline-none focus:bg-theme-purple focus:text-white">Mobile</button>
               </Tab>
-              <Tab>
-                <button className="font-normal px-5 py-2 mr-3 text-theme-purple text-lg border border-theme-purple rounded-full transition duration-300 hover:bg-theme-purple hover:text-white focus:outline-none focus:bg-theme-purple focus:text-white">Website</button>
-              </Tab>
+
               <Tab>
                 <button className="font-normal px-8 py-2 text-theme-purple text-lg border border-theme-purple rounded-full transition duration-300 hover:bg-theme-purple hover:text-white focus:outline-none focus:bg-theme-purple focus:text-white">UI/UX</button>
               </Tab>
@@ -37,7 +39,7 @@ export default function AllPortfolio({ data }) {
           <TabPanel>
             <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-2 xl:gap-8 justify-items-center">
               {
-                                mobile.map((item, index) => (
+                                website.map((item, index) => (
                                   <Fade bottom delay={500 * index}>
                                     <Button type="link" href={`/project/${item.id}`}>
                                       <div className="group rounded-2xl shadow-xl w-auto w-11/12 m-3 transform transition duration-500 hover:scale-110 portofolio-card">
@@ -66,7 +68,7 @@ export default function AllPortfolio({ data }) {
           <TabPanel>
             <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-2 xl:gap-8 justify-items-center">
               {
-                                website.map((item, index) => (
+                                mobile.map((item, index) => (
                                   <Fade bottom delay={500 * index}>
                                     <Button type="link" href={`/project/${item.id}`}>
                                       <div className="group rounded-2xl shadow-xl w-auto w-11/12 m-3 transform transition duration-500 hover:scale-110 portofolio-card">
